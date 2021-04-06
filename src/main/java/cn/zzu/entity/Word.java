@@ -16,8 +16,6 @@ public class Word {
     private String audio;
     //例句
     private String sentence;
-    // 上次记忆时间
-    private String last;
 
     public String getId() {
         return id;
@@ -58,12 +56,6 @@ public class Word {
     public void setSentence(String sentence) {
         this.sentence = sentence;
     }
-
-    public String getLast() {
-        return last;
-    }
-
-    public void setLast(String last) {
-        this.last = last;
-    }
 }
+
+
