@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+
 /**
  * @program: demo
  * @description: 单词界面逻辑
@@ -13,9 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @create: 2021-04-01 19:30
  **/
 @Controller
-@RequestMapping("word")
+@RequestMapping("/word")
 public class wordController {
-    @RequestMapping("next")
+    @RequestMapping("/next")
     @ResponseBody
     public Word nextWord(@RequestParam("userId") String id){
         Word word = new Word();
@@ -28,9 +30,17 @@ public class wordController {
         return word;
 
     }
-    @RequestMapping("addNote")
+    @RequestMapping("/addNote")
     @ResponseBody
     public void addNote(@RequestParam("userId") String userId,@RequestParam("wordId") String wordId){
 //        insert 一条score为0的学习记录
+    }
+
+    @ResponseBody
+    @RequestMapping("/notelist")
+    public ArrayList<Word> getNoteList(){
+        ArrayList<Word> list = new ArrayList<>();
+//        从数据库中查询到
+        return list;
     }
 }

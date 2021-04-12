@@ -15,7 +15,7 @@ import java.util.List;
  * @create: 2021-04-06 17:00
  **/
 @Controller
-@RequestMapping("note")
+@RequestMapping("/note")
 public class NoteController {
     @RequestMapping("remove")
     public void removeWord(@RequestParam("userId") String userId,@RequestParam("wordId") String wordId){
