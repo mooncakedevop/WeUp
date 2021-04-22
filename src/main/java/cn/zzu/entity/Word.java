@@ -9,13 +9,12 @@ package cn.zzu.entity;
 public class Word {
     private String id;
     //拼写
-    private String spelling;
+    private String word;
     //音标
-    private String pron;
+    private String america_pronunciation;
     //音频
-    private String audio;
+    private String meaning;
     //例句
-    private String sentence;
 
     public String getId() {
         return id;
@@ -25,36 +24,28 @@ public class Word {
         this.id = id;
     }
 
-    public String getSpelling() {
-        return spelling;
+    public String getWord() {
+        return word;
     }
 
-    public void setSpelling(String spelling) {
-        this.spelling = spelling;
+    public void setWord(String word) {
+        this.word = word;
     }
 
-    public String getPron() {
-        return pron;
+    public String getAmerica_pronunciation() {
+        return america_pronunciation;
     }
 
-    public void setPron(String pron) {
-        this.pron = pron;
+    public void setAmerica_pronunciation(String america_pronunciation) {
+        this.america_pronunciation = america_pronunciation;
     }
 
-    public String getAudio() {
-        return audio;
+    public String getMeaning() {
+        return meaning;
     }
 
-    public void setAudio(String audio) {
-        this.audio = audio;
-    }
-
-    public String getSentence() {
-        return sentence;
-    }
-
-    public void setSentence(String sentence) {
-        this.sentence = sentence;
+    public void setMeaning(String meaning) {
+        this.meaning = meaning;
     }
 }
 

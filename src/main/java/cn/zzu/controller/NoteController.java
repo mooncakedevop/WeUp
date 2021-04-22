@@ -27,13 +27,7 @@ public class NoteController {
 //        查询该用户所有分数为0的
         List<Word> list = new ArrayList<>();
         Word word = new Word();
-        word.setId("1");
-        word.setSpelling("confidence");
-        word.setPron("'kɔnfidəns");
 
-        word.setAudio("c:/confidence.mp3");
-        word.setSentence("I have confidence to do anything");
-        list.add(word);
         return list;
 
     }
