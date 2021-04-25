@@ -4,6 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.zzu.dao.WordDao">
     <select id="nextBatchWord" resultType="cn.zzu.entity.Word">
-        select * from words_copy1 limit 10
+        select * from words_copy1 as w inner join (select wordid from userword where score &gt;= 0 order by score limit 10 ) as w2 on w.id=w2.wordid
     </select>
+    <select id="noteWords" resultType="cn.zzu.entity.Word">
+        select * from words_copy1 as w inner join (select wordid from userword where score &lt; 0 order by time desc limit 10 ) as w2 on w.id=w2.wordid
+    </select>
+    <update id="addNote">
+		update userword set score=-10,time=#{time} where openid =#{userId} and wordid= #{wordId}
+	</update>
+    <update id="removeNote">
+		update userword set score= 10,time=#{time} where openid =#{userId} and wordid= #{wordId}
+	</update>
 </mapper>
